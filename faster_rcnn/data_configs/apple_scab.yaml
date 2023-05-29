@@ -1,0 +1,42 @@
+# Images and voc_labels directory should be relative to train.py
+DATASET:
+    # Public dataset:
+    AppleScabFDs:
+        NUM: '0'
+        TRAIN_DIR_IMAGES: '../dataset/AppleScabFDs/images/train'
+        TRAIN_DIR_LABELS: '../dataset/AppleScabFDs/voc_labels/train'
+        VALID_DIR_IMAGES: '../dataset/AppleScabFDs/images/valid'
+        VALID_DIR_LABELS: '../dataset/AppleScabFDs/voc_labels/valid'
+    _apple_fruit_disease:
+        NUM: '1'
+        TRAIN_DIR_IMAGES: '../dataset/apple_fruit_disease/images/train'
+        TRAIN_DIR_LABELS: '../dataset/apple_fruit_disease/voc_labels/train'
+        VALID_DIR_IMAGES: '../dataset/apple_fruit_disease/images/valid'
+        VALID_DIR_LABELS: '../dataset/apple_fruit_disease/voc_labels/valid'
+    #  Self-collected dataset.
+    _SelfAppleScabSet:
+        NUM: '2'
+        TRAIN_DIR_IMAGES: '../dataset/SelfAppleScabSet/images/train'
+        TRAIN_DIR_LABELS: '../dataset/SelfAppleScabSet/voc_labels/train'
+        VALID_DIR_IMAGES: '../dataset/SelfAppleScabSet/images/valid'
+        VALID_DIR_LABELS: '../dataset/SelfAppleScabSet/voc_labels/valid'
+    #
+    # The dataset used in the final project.
+    #
+    final_dataset:
+        TRAIN_DIR_IMAGES: '../dataset/final_dataset/images/train'
+        TRAIN_DIR_LABELS: '../dataset/final_dataset/voc_labels/train'
+        VALID_DIR_IMAGES: '../dataset/final_dataset/images/valid'
+        VALID_DIR_LABELS: '../dataset/final_dataset/voc_labels/valid'
+
+# Class names.
+CLASSES: [
+    '__background__',
+    'scab'
+]
+
+# Number of classes (object classes + 1 for background class in Faster RCNN).
+NC: 2
+
+# Whether to save the predictions of the validation set while training.
+SAVE_VALID_PREDICTION_IMAGES: True
